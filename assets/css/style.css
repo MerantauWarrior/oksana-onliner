@@ -81,7 +81,6 @@ input, button, select{
 }
 /*General*/
 .container{
-    position: relative;
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
@@ -170,6 +169,9 @@ input, button, select{
     right: 0;
     left: 0;
     z-index: 99;
+}
+.header .container{
+    position: relative;
 }
 .menu-icon{
     position: relative;
