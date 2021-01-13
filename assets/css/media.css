@@ -1,0 +1,114 @@
+@media all and (min-width: 320px) and (max-width: 767px){
+    h1{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    h2{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .logo{
+        height: 60px;
+    }
+    .logo img{
+        max-height: 100%;
+    }
+    .interaction-item:not(:first-child){
+        margin-left: 25px;
+    }
+    .interaction-item__text{
+        display: none;
+    }
+    /*header*/
+    .header{
+        top: 30px;
+    }
+    .navigation{
+        margin-top: -30px;
+        left: 0;
+    }
+    /*hero*/
+    .hero{
+        padding: 120px 0 60px 0;
+    }
+    .hero__description{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .hero-advantages{
+        position: static;
+        margin-top: 40px;
+        padding: 15px 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    .hero-advantages__item{
+        width: 100%;
+        padding: 15px;
+    }
+    .hero-advantages__item:not(:last-child){
+        border-right: none;
+    }
+    /*catalog*/
+    .catalog{
+        padding: 60px 0 45px 0;
+    }
+    .catalog__item{
+        width: 100%;
+    }
+    .catalog-product__content{
+        padding: 30px 15px;
+    }
+    .catalog-product__more{
+        margin-right: 30px;
+    }
+    /*benefits*/
+    .benefits{
+        padding: 60px 0 30px 0;
+        background-image: none;
+    }
+    .benefits-item{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .benefits-item__ml-50{
+        margin-left: 0;
+    }
+    .benefits-item__title,
+    .benefits-item__description{
+        margin-top: 15px;
+    }
+    /*about*/
+    .about{
+        padding: 60px 0;
+    }
+    .about h2{
+        margin-bottom: 20px;
+    }
+    /*feedbacks*/
+    .feedbacks{
+        padding: 60px 0;
+        background-image: none;
+    }
+    .feedbacks-slide{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .feedbacks-slide__img{
+        margin-bottom: 20px;
+    }
+    .feedbacks__slider .slick-dots{
+        margin-top: 20px;
+    }
+    /*footer*/
+    .footer-navigation{
+        padding-bottom: 20px;
+    }
+    .footer-navigation__item{
+        width: 160px;
+        margin: 0 5px 10px 5px;
+    }
+}
