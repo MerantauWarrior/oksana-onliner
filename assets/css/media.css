@@ -100,16 +100,31 @@
         padding: 60px 0 30px 0;
         background-image: none;
     }
+    .benefits__items{
+        margin-top: 30px;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
     .benefits-item{
-        width: 100%;
+        width: 50%;
+        padding: 0;
         margin-bottom: 30px;
     }
     .benefits-item__ml-50{
         margin-left: 0;
     }
+    .benefits-item__img svg{
+        height: 60px;
+    }
     .benefits-item__title,
     .benefits-item__description{
-        margin-top: 15px;
+        margin-top: 10px;
+    }
+    .benefits-item__title{
+        font-size: 18px;
+    }
+    .benefits-item__description{
+        font-size: 14px;
     }
     /*about*/
     .about{
@@ -117,6 +132,9 @@
     }
     .about h2{
         margin-bottom: 20px;
+    }
+    .about__col{
+        max-width: 100%;
     }
     /*feedbacks*/
     .feedbacks{
