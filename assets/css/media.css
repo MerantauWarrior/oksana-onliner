@@ -19,6 +19,10 @@
     .interaction-item__text{
         display: none;
     }
+    .btn-red{
+        height: 40px;
+        line-height: 38px;
+    }
     /*header*/
     .header{
         top: 30px;
@@ -38,7 +42,7 @@
     .hero-advantages{
         position: static;
         margin-top: 40px;
-        padding: 15px 0;
+        padding: 5px 15px;
         -webkit-transform: none;
         -moz-transform: none;
         -ms-transform: none;
@@ -47,23 +51,49 @@
     }
     .hero-advantages__item{
         width: 100%;
-        padding: 15px;
+        padding: 15px 0;
     }
     .hero-advantages__item:not(:last-child){
         border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
     }
     /*catalog*/
     .catalog{
         padding: 60px 0 45px 0;
     }
+    .catalog__items{
+        margin-top: 30px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
     .catalog__item{
-        width: 100%;
+        width: 50%;
+        padding: 5px;
     }
     .catalog-product__content{
-        padding: 30px 15px;
+        padding: 15px;
+    }
+    .catalog-product__title{
+        font-size: 18px;
+    }
+    .catalog-product__variants{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .catalog-product__variants__label{
+        display: none;
+        /*margin-right: 0;*/
+        /*margin-bottom: 10px;*/
+    }
+    .catalog-product__price{
+        font-size: 24px;
+        line-height: 1;
+    }
+    .catalog-product__btns{
+        flex-direction: column;
     }
     .catalog-product__more{
-        margin-right: 30px;
+        margin-right: 0;
     }
     /*benefits*/
     .benefits{
