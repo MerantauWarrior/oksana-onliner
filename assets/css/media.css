@@ -136,6 +136,17 @@
     .about__col{
         max-width: 100%;
     }
+    /*Useful*/
+    .useful{
+        padding-bottom: 30px;
+    }
+    .useful-navigation{
+        padding-bottom: 20px;
+    }
+    .useful-navigation__item{
+        width: 160px;
+        margin: 0 5px 10px 5px;
+    }
     /*feedbacks*/
     .feedbacks{
         padding: 60px 0;
@@ -150,13 +161,5 @@
     }
     .feedbacks__slider .slick-dots{
         margin-top: 20px;
-    }
-    /*footer*/
-    .footer-navigation{
-        padding-bottom: 20px;
-    }
-    .footer-navigation__item{
-        width: 160px;
-        margin: 0 5px 10px 5px;
     }
 }
