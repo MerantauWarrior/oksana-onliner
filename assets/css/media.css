@@ -186,11 +186,35 @@
         line-height: 36px;
     }
     /*RESELLERS*/
+    .resellers-item{
+        justify-content: center;
+    }
     .resellers-item:not(:last-child){
         margin-bottom: 30px;
     }
     .resellers-item__text{
         margin-top: 15px;
         margin-left: 0;
+    }
+    .resellers-item__title{
+        text-align: center;
+    }
+    /*DELIVERY*/
+    .delivery-item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .delivery-item:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .delivery-item__text{
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .delivery-item__title{
+        text-align: center;
+    }
+    .delivery-item__dates{
+        justify-content: center;
     }
 }

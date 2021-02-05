@@ -49,6 +49,9 @@ ul{
     margin: 0;
     padding: 0;
 }
+li{
+    position: relative;
+}
 img, svg{
     display: block;
     max-width: 100%;
@@ -676,6 +679,21 @@ input, button, select{
     font-size: 45px;
     line-height: 70px;
 }
+.page-regular ul li{
+    padding-left: 12px;
+}
+.page-regular ul li:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #222222;
+}
 /*RESELLERS*/
 .resellers-item{
     display: flex;
@@ -715,4 +733,39 @@ input, button, select{
     width: 17px;
     min-width: 17px;
     margin-right: 5px;
+}
+/*DELIVERY*/
+.delivery-item{
+    display: flex;
+}
+.delivery-item:not(:last-child){
+    margin-bottom: 40px;
+}
+.delivery-item__icon{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    min-width: 60px;
+}
+.delivery-item__text{
+    margin-left: 30px;
+}
+.delivery-item__title{
+    margin-bottom: 10px;
+    font-family: 'Cera Pro Bold', sans-serif;
+}
+.delivery-item__dates{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Cera Pro Bold', sans-serif;
+}
+.delivery-item__date:not(:last-child){
+    margin-right: 14px;
+}
+.delivery-item__date--red{
+    color: #fb3a4f;
+}
+.delivery-item__date-text{
+    font-size: 30px;
+    line-height: 32px;
 }
