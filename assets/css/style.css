@@ -159,6 +159,16 @@ input, button, select{
     background-color: #fff;
     box-shadow: none;
 }
+.box{
+    border: 1px solid #e8e8f5;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px #f5f5ff;
+}
+.box--regular{
+    padding: 100px;
+}
 /*Header*/
 .header{
     padding: 30px 0;
@@ -587,7 +597,7 @@ input, button, select{
 
 /*Breadcrumbs*/
 .breadcrumbs{
-    padding: 50px 0 20px 0;
+    padding: 50px 0 25px 0;
 }
 .breadcrumbs__list{
     display: flex;
@@ -607,21 +617,10 @@ input, button, select{
 .product{
     padding-bottom: 100px;
 }
-.product__title{
-    margin-bottom: 50px;
-    font-family: 'Cera Pro Bold', sans-serif;
-    font-size: 45px;
-    line-height: 70px;
-}
 .product__box{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid #e8e8f5;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    box-shadow: 0 5px 25px #f5f5ff;
     overflow: hidden;
 }
 .product__media{
@@ -665,4 +664,55 @@ input, button, select{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+/*Page regular*/
+.page-regular{
+    padding-bottom: 10px;
+}
+.page-title{
+    margin-bottom: 50px;
+    font-family: 'Cera Pro Bold', sans-serif;
+    font-size: 45px;
+    line-height: 70px;
+}
+/*RESELLERS*/
+.resellers-item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.resellers-item:not(:last-child){
+    margin-bottom: 40px;
+}
+.resellers-item__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 90px;
+    padding: 15px;
+    border: 1px solid #e8e8f5;
+}
+.resellers-item__logo img{
+    max-height: 100%;
+}
+.resellers-item__text{
+    margin-left: 30px;
+}
+.resellers-item__title{
+    margin-bottom: 5px;
+    font-family: 'Cera Pro Bold', sans-serif;
+}
+.resellers-item__info{
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.resellers-item__info-icon{
+    display: flex;
+    justify-content: center;
+    width: 17px;
+    min-width: 17px;
+    margin-right: 5px;
 }

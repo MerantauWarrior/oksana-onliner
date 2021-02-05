@@ -19,6 +19,9 @@
         height: 40px;
         line-height: 38px;
     }
+    .box--regular{
+        padding: 15px;
+    }
     /*header*/
     .header--home{
         top: 0;
@@ -176,5 +179,18 @@
     }
     .product__description{
         margin: 30px 0;
+    }
+    /*Page regular*/
+    .page-title{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    /*RESELLERS*/
+    .resellers-item:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .resellers-item__text{
+        margin-top: 15px;
+        margin-left: 0;
     }
 }
