@@ -59,7 +59,7 @@
         <nav class="navigation">
           <a href="#" class="navigation__link">О компании</a>
           <a href="#" class="navigation__link">Поддержка</a>
-          <a href="#" class="navigation__link">Оплата/доставка</a>
+          <a href="delivery.html" class="navigation__link">Оплата/доставка</a>
           <a href="#" class="navigation__link">Оптовикам</a>
           <a href="#" class="navigation__link">Интернет-магазин</a>
         </nav>
@@ -138,7 +138,7 @@
             </div>
             <div class="product__actions">
               <div class="product-price">15 000 ₽</div>
-              <a href="#" class="btn-red">в корзину</a>
+              <a href="#" class="btn btn--red">в корзину</a>
             </div>
           </div>
         </div>
@@ -338,11 +338,11 @@
           <span class="footer-navigation__icon"><img src="assets/img/footer-menu-1.png" alt="text"></span>
           <span class="footer-navigation__title">Поддержка</span>
         </a>
-        <a href="#" class="footer-navigation__item" title="Официальные дилеры">
+        <a href="resellers.html" class="footer-navigation__item" title="Официальные дилеры">
           <span class="footer-navigation__icon"><img src="assets/img/footer-menu-2.png" alt="text"></span>
           <span class="footer-navigation__title">Официальные дилеры</span>
         </a>
-        <a href="#" class="footer-navigation__item" title="Оплата/доставка">
+        <a href="delivery.html" class="footer-navigation__item" title="Оплата/доставка">
           <span class="footer-navigation__icon"><img src="assets/img/footer-menu-3.png" alt="text"></span>
           <span class="footer-navigation__title">Оплата/доставка</span>
         </a>
@@ -401,6 +401,48 @@
       </div>
     </div>
   </footer>
+</div>
+<div class="modal">
+  <div class="modal__window modal-basket">
+    <div class="modal__close">
+      <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="20px" height="20px">
+        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+              d="M13.539,9.952 L19.635,16.049 C20.031,16.445 20.031,17.087 19.635,17.483 L17.483,19.635 C17.087,20.031 16.445,20.031 16.049,19.635 L9.952,13.538 L3.856,19.635 C3.460,20.031 2.818,20.031 2.422,19.635 L0.270,17.483 C-0.126,17.087 -0.126,16.445 0.270,16.049 L6.366,9.952 L0.270,3.856 C-0.126,3.460 -0.126,2.818 0.270,2.422 L2.422,0.270 C2.818,-0.126 3.460,-0.126 3.856,0.270 L9.952,6.366 L16.049,0.270 C16.445,-0.126 17.087,-0.126 17.483,0.270 L19.635,2.422 C20.031,2.818 20.031,3.460 19.635,3.856 L13.539,9.952 Z"/>
+      </svg>
+    </div>
+    <div class="modal-basket__title">Корзина</div>
+    <div class="modal-basket__empty">Вы не выбрали ни одного товара</div>
+    <div class="modal-basket__items">
+      <div class="modal-basket-item">
+        <div class="modal-basket-item__img"><img src="assets/img/modal-basket-1.jpg" alt="text"></div>
+        <div class="modal-basket-item__name">Air cube</div>
+        <div class="modal-basket-item__price product-price">15 000 ₽</div>
+        <a href="#" class="btn modal-basket-item__btn">Удалить</a>
+      </div>
+      <div class="modal-basket-item">
+        <div class="modal-basket-item__img"><img src="assets/img/modal-basket-1.jpg" alt="text"></div>
+        <div class="modal-basket-item__name">Air cube</div>
+        <div class="modal-basket-item__price product-price">15 001 ₽</div>
+        <a href="#" class="btn modal-basket-item__btn">Удалить</a>
+      </div>
+      <div class="modal-basket-item">
+        <div class="modal-basket-item__img"><img src="assets/img/modal-basket-1.jpg" alt="text"></div>
+        <div class="modal-basket-item__name">Air cube</div>
+        <div class="modal-basket-item__price product-price">15 002 ₽</div>
+        <a href="#" class="btn modal-basket-item__btn">Удалить</a>
+      </div>
+    </div>
+    <div class="modal-basket__total">
+      <div class="modal-basket__total-text">
+        <div>Итого:</div>
+        <div class="product-price">45 000 ₽</div>
+      </div>
+      <a href="#" class="btn btn--red">Оформить</a>
+    </div>
+  </div>
 </div>
 
 <script src="libs/jquery-3.5.1.min.js"></script>

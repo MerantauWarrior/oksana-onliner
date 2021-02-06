@@ -36,6 +36,27 @@ $(document).ready(function () {
       }
     ]
   });
+  // modal
+  $('.modal__close').click(function (e) {
+    e.preventDefault();
+    $('.modal').hide();
+  });
+  // Cart modal
+  $('.cart').click(function (e) {
+    e.preventDefault();
+    $('.modal').show();
+  });
+  $('.modal-basket-item__btn').click(function (e) {
+    e.preventDefault();
+    $(this).closest('.modal-basket-item').remove();
+    if($('.modal-basket-item').length < 1){
+      $('.modal-basket__empty').show();
+      $('.modal-basket__total').hide();
+    }else {
+      $('.modal-basket__empty').hide();
+      $('.modal-basket__total').show();
+    }
+  });
 
   // validation emails and collect emails
   $.fn.serializeFormJSON = function () {
