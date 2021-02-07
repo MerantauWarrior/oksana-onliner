@@ -1,17 +1,4 @@
-// $(document).keydown(function(event){
-//   if(event.keyCode==123){
-//     return false;
-//   }
-//   else if (event.ctrlKey && event.shiftKey && event.keyCode==73){
-//     return false;
-//   }
-// });
-// $(document).on("contextmenu",function(e){
-//   e.preventDefault();
-// });
-
 $(document).ready(function () {
-
   // header
   $('.menu-icon').click(function () {
     $('.navigation').toggleClass('navigation_opened');
@@ -40,23 +27,101 @@ $(document).ready(function () {
   $('.modal__close').click(function (e) {
     e.preventDefault();
     $('.modal').hide();
+    $('body').css('overflow','auto');
   });
   // Cart modal
   $('.cart').click(function (e) {
     e.preventDefault();
     $('.modal').show();
+    $('body').css('overflow','hidden');
   });
-  $('.modal-basket-item__btn').click(function (e) {
+
+  // Product
+  $('.product-variant').click(function () {
+    $(this).siblings('.product-variant').removeClass('product-variant_checked');
+    $(this).addClass('product-variant_checked');
+    var color = $(this).attr('class').toString().split(' ')[1].split('--')[1]
+    $(this).closest('.js-product').data('color', color);
+  });
+  // ADD product
+  var basket = localStorage.getItem("basket");
+  basket = basket ? JSON.parse(basket) : [];
+  var total = 0;
+  if(basket.length > 0){
+    for(var i=0; i < basket.length; i++){
+      total += basket[i].price;
+    }
+  }
+  $('.cart__qty').text(basket.length);
+  $('.product-total').text(total);
+
+  $('.js-add').click(function (e) {
     e.preventDefault();
-    $(this).closest('.modal-basket-item').remove();
-    if($('.modal-basket-item').length < 1){
-      $('.modal-basket__empty').show();
-      $('.modal-basket__total').hide();
-    }else {
-      $('.modal-basket__empty').hide();
-      $('.modal-basket__total').show();
+    var el = $(this).closest('.js-product');
+    var exists = false;
+    for (var i = 0; i < basket.length; i++){
+      if(basket[i].id === parseInt(el.data('id'))){
+        exists = true;
+      }
+    }
+    if(!exists){
+      basket.push({
+        title: el.data('title'),
+        price: parseInt(el.data('price')),
+        color: el.data('color'),
+        img: el.data('img'),
+        id: parseInt(el.data('id'))
+      });
+      localStorage.setItem("basket", JSON.stringify(basket));
+      $('.cart__qty').text(basket.length);
+      total += parseInt(el.data('price'));
+      $('.product-total').text(total);
+      fillBasket();
     }
   });
+
+  // Delete product
+  $(document).on('click','.js-delete',function (e) {
+    e.preventDefault();
+    var id = parseInt($(this).closest('.modal-basket-item').data('id'));
+    for (var i = 0; i < basket.length; i++){
+      if(basket[i].id === id){
+        basket.splice(i, 1);
+      }
+    }
+    localStorage.setItem("basket", JSON.stringify(basket));
+    total -= parseInt(parseInt($(this).closest('.modal-basket-item').data('price')));
+    $('.product-total').text(total);
+    $(this).closest('.modal-basket-item').remove();
+    $('.cart__qty').text(basket.length);
+    if(basket.length < 1){
+      $('.modal-basket__empty').show();
+      $('.modal-basket__total').css('display','none');
+    }
+  });
+
+  function fillBasket() {
+    if(basket.length > 0){
+      $('.modal-basket__empty').hide();
+      $('.modal-basket__total').css('display','flex');
+    }else {
+      $('.modal-basket__empty').show();
+      $('.modal-basket__total').css('display','none');
+    }
+    var bItems = basket.map(function (item) {
+      return '<div class="modal-basket-item" data-title="'+item.title+'" data-price="'+item.price+'" data-img="'+item.img+'" data-color="'+item.color+'" data-id="'+item.id+'">\n' +
+        '        <div class="modal-basket-item__img"><img src="'+item.img+'" alt="text"></div>\n' +
+        '        <div class="modal-basket-item__name">'+item.title+'</div>\n' +
+        '        <div class="modal-basket-item__price product-price">'+item.price+'&nbsp₽</div>\n' +
+        '        <a href="#" class="btn modal-basket-item__btn js-delete">Удалить</a>\n' +
+        '      </div>'
+    }).join('');
+    $('.modal-basket__items').html(bItems);
+  }
+  fillBasket();
+
+
+
 
   // validation emails and collect emails
   $.fn.serializeFormJSON = function () {

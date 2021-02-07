@@ -111,7 +111,7 @@
     </div>
   </div>
   <main>
-    <section class="product">
+    <section class="product js-product" data-title="Air cube" data-price="15000" data-img="assets/img/product-1.jpg" data-color="white" data-id="1">
       <div class="container">
 
         <h1 class="page-title">Air cube</h1>
@@ -125,9 +125,9 @@
             <div class="product-variants product__variants">
               <div class="product-variants__label">выбора цвета:</div>
               <div class="product-variants-items">
-                <div class="product-variant product-variant-white product-variant_checked"></div>
-                <div class="product-variant product-variant-black"></div>
-                <div class="product-variant product-variant-white-rock"></div>
+                <div class="product-variant product-variant--white product-variant_checked"></div>
+                <div class="product-variant product-variant--black"></div>
+                <div class="product-variant product-variant--white-rock"></div>
               </div>
             </div>
             <div class="product__description">
@@ -138,7 +138,7 @@
             </div>
             <div class="product__actions">
               <div class="product-price">15 000 ₽</div>
-              <a href="#" class="btn btn--red">в корзину</a>
+              <a href="#" class="btn btn--red js-add">в корзину</a>
             </div>
           </div>
         </div>
@@ -415,30 +415,11 @@
     </div>
     <div class="modal-basket__title">Корзина</div>
     <div class="modal-basket__empty">Вы не выбрали ни одного товара</div>
-    <div class="modal-basket__items">
-      <div class="modal-basket-item">
-        <div class="modal-basket-item__img"><img src="assets/img/modal-basket-1.jpg" alt="text"></div>
-        <div class="modal-basket-item__name">Air cube</div>
-        <div class="modal-basket-item__price product-price">15 000 ₽</div>
-        <a href="#" class="btn modal-basket-item__btn">Удалить</a>
-      </div>
-      <div class="modal-basket-item">
-        <div class="modal-basket-item__img"><img src="assets/img/modal-basket-1.jpg" alt="text"></div>
-        <div class="modal-basket-item__name">Air cube</div>
-        <div class="modal-basket-item__price product-price">15 001 ₽</div>
-        <a href="#" class="btn modal-basket-item__btn">Удалить</a>
-      </div>
-      <div class="modal-basket-item">
-        <div class="modal-basket-item__img"><img src="assets/img/modal-basket-1.jpg" alt="text"></div>
-        <div class="modal-basket-item__name">Air cube</div>
-        <div class="modal-basket-item__price product-price">15 002 ₽</div>
-        <a href="#" class="btn modal-basket-item__btn">Удалить</a>
-      </div>
-    </div>
+    <div class="modal-basket__items"></div>
     <div class="modal-basket__total">
       <div class="modal-basket__total-text">
         <div>Итого:</div>
-        <div class="product-price">45 000 ₽</div>
+        <div class="product-price"><span class="product-total">0</span> ₽</div>
       </div>
       <a href="#" class="btn btn--red">Оформить</a>
     </div>
