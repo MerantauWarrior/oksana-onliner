@@ -239,7 +239,7 @@
     .modal-basket__items{
         display: flex;
         flex-wrap: wrap;
-        max-height: calc(100vh - 178px);
+        max-height: calc(100% - 178px);
     }
     .modal-basket-item{
         flex-direction: column;
@@ -254,6 +254,10 @@
         margin: auto 0 15px 0;
     }
     .modal-basket__total{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         padding: 30px 15px;
     }
 }
